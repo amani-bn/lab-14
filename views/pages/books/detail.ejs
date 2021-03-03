@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>Best Books! </h1>
+    <div class="dropdown"><button class="menu">
+        </button>
+        <div class="dropdown-content">
+            <a href="/">Home </a>
+            <a href="/searches/new">Search The Google Book Api</a>
+        </div>
+    </div>
+</header>
+  
+        <section>
+        <img src=<%=task.image_url %> alt="">
+        <h2><%=task.title %></h2>
+        <h3><%=task.author %></h3>
+        <p><%=task.description %></p>
+        <h4><%=task.isbn%></h4>
+        <!-- <button>View details</button> -->
+       </section>
+        
+       <form action="/deleteBook/<%= task.id %>?_method=delete" method="post">
+        <button>Delete Book</button>
+      </form>
+
+       <button id="updateBtn">Show Update Form</button>
+       <section id="updateForm">
+        <h2>Update Task</h2>
+        <!--  updateBook/:id -->
+        <form action="/updateBook/<%= task.id %>?_method=put" method="POST">
+          <input type="text" name="author" value="<%= task.author  %>" >
+          <input type="text" name="title" value="<%= task.title%>">
+          <input type="text" name="isbn" value="<%= task.isbn  %>">
+          <input type="text" name="image_url" value="<%= task.image_url%>">
+          <textarea name="description" cols="15" rows="10"><%= task.description%> </textarea>
+          <button>Update Book</button>
+        </form>
+      </section>
+   
+      
+
+
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="/app.js"></script>
+</body>
+</html>

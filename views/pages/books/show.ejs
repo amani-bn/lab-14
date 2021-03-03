@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Best Books! </h1>
+        <div class="dropdown"><button class="menu">
+                <!-- <img src="./styles/overlay.png" alt=""> -->
+            </button>
+            <div class="dropdown-content">
+                <a href="/">Home </a>
+                <a href="/searches/new">Search The Google Book Api</a>
+            </div>
+        </div>
+    </header>
+    <div class="counter">
+        <h2>
+           Search Result
+        </h2>
+    </div>
+
+
+    <% mylist.forEach(book =>{  %>
+        <div>
+        <img src=<%=book.image_url %> alt="">
+        <h2><%=book.title %></h2>
+        <h3><%=book.authors %></h3>
+        <p><%=book.description %></p>
+        <!-- <button>View details</button> -->
+        <!-- <a href="/detail/<%= book.id %>">View Details</a> -->
+        </div>
+        <% }) %>
+</body>
+</html>

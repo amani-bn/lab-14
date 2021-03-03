@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+fieldset{
+    background-color: lightgrey;
+    border-radius: 5px;
+  }
+  
+  
+.title, .author{
+    padding: 25px;
+    margin: 10px;
+  background-color: rgb(212, 219, 228);
+}
+
+header {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    height: 97px;
+    text-align:left;
+
+
+} 
+
+body{
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgb(159, 163, 163);
+   }
+   main{
+    width: 100%;
+}
+#but , .viewBut{
+    font-size: xx-large;
+    width: 100%;
+    height:100px;
+/* height:25px; */
+/* padding: 25px;
+margin: 10px */
+background-color: rgb(0, 0, 0);
+color: white;
+border-radius: 5px;
+}
+.viewBut{
+  margin-bottom: 10%;
+  width: 50%;
+}
+em{color: black;
+font-size: larger;}
+div{padding: 10px;
+    background-color: rgba(219, 216, 216, 0.979);
+    color: white;
+    text-align: center; 
+    border: white solid 2px;
+    border-radius: 5px;
+    width: 70%;
+    margin: auto;
+margin-bottom: 40px;
+}
+.counter{
+  width: 100%;
+  background-color: rgb(92, 85, 85);
+  margin-bottom: 30px;
+  border: 0px;
+    border-radius: 0px;
+}
+div img{
+  
+  height:350px ;
+  width: 300px;
+ 
+  border: white solid 6px;
+}
+   /* fieldset{
+    background-color: lightgrey;
+    border-radius: 5px;
+  } */
+   /* .input{
+     /* height:25px; */
+    /* padding: 25px;
+    margin: 10px } */
+ 
+   
+  /* input
+  {    width: 90%;
+height: 30px;
+    background-color:white;
+    border-radius: 5px;
+font-size: x-large;
+
+  } */
+  input[type = text]{
+    height: 1vh;
+    width: 75vw;
+    padding: 6vw;
+    border-radius: 1vh;
+}
+
+input[type=radio]{
+    margin-right: 10px;
+}
+  .input{
+height: 50px;
+width: 98%;
+  }
+  .input,input,#but{
+      margin-bottom: 10px;
+  }
+  footer{
+      height: 75px;
+      background-color: black;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+  
+/* user agent stylesheet */
+label {
+    cursor: default;
+}
+
+
+  .dot{
+    margin: auto;
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 6vw;
+
+}

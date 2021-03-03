@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <!-- <link rel="stylesheet" href="/styles/style.css"> -->
+    <link rel="stylesheet" href="./styles/layout.css">
+
+    <link rel="stylesheet" href="./styles/modules.css">
+    <title>Test</title>
+</head>
+<body>
+    <header>
+    <h1>Best Books! </h1>
+    <!-- <h1>Hello world </h1> -->
+    <!-- <a href="/">Home Route</a>
+    <a href="/searches/new">Search Route</a> -->
+    <!-- <a href="">Form </a>
+    <a href="">search</a> -->
+    <div class="dropdown"><button class="menu">
+
+    </button>
+    <div class="dropdown-content">
+        <a href="/">Home </a>
+        <a href="/searches/new">Search The Google Book Api</a>
+    </div>
+</div>
+</header>
+
+     <!-- <p>You Have <%= bookcount %> Books Saved </p> -->
+
+     <div class="counter">
+        <h2>
+            You Have <%= bookcount %> Saved Books
+        </h2>
+    </div>
+    <% booklist.forEach(book =>{  %>
+        <div>
+        <img src=<%=book.image_url %> alt="">
+        <h2><%=book.title %></h2>
+        <h3><%=book.authors %></h3>
+        <p><%=book.description %></p>
+        <form action="/books/<%= book.id%>" method="GET">
+        <button type="submit">View Details</button>
+        <!-- <a href="/books/<%= book.id %>">View Details</a> -->
+        <!-- <button>View details</button> -->
+        </form>
+        </div>
+        <% }) %>
+</body>
+</html>
